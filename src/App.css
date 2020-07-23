@@ -1,5 +1,61 @@
 .App {
   text-align: center;
+  height: 100vh;
+  background-color: cadetblue;
+}
+
+.node{
+  border: 0px solid black;
+  border-radius: 15px;
+}
+
+.node-inner{
+  background-color: gray;
+  z-index: -2;
+  overflow: hidden;
+  border: 2px solid black;
+}
+
+.node-outer{
+  position: absolute;
+}
+
+.b {
+  left: -10px;
+  bottom: 40px;
+  background-color: white;
+  border-right: black 2px solid;
+  border-top: black 2px solid;
+  border-radius: 3px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  transform: rotate(45deg)
+}
+
+.c {
+  right: -10px;
+  top: 30px;
+  background-color: gray;
+  border-top: black 2px solid;
+  border-right: black 2px solid;
+  border-radius: 3px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  transform: rotate(45deg);
+  z-index: 0;
+}
+
+.nodeSection{
+  margin: 7px;
+  z-index: 1;
+}
+
+#nodeTitle{
+  background-color: rgba(255,255,255,.3);
+  margin: 0;
+  padding: 5px;
 }
 
 .App-logo {
