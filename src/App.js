@@ -1,11 +1,11 @@
-import React from 'react';
-import './App.css';
-import Node from "./Node.jsx"
+import React from "react";
+import "./App.css";
+import NodeEditor from "./NodeEditor.jsx";
 
 function App() {
   return (
     <div className="App">
-      <Node name="Text" id="mydiv"/>
+      <NodeEditor />
     </div>
   );
 }

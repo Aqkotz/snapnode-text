@@ -4,20 +4,25 @@
   background-color: cadetblue;
 }
 
-.node{
+.node {
   border: 0px solid black;
   border-radius: 15px;
 }
 
-.node-inner{
+.node-inner {
   background-color: gray;
   z-index: -2;
   overflow: hidden;
   border: 2px solid black;
+  display: inline-block;
 }
 
-.node-outer{
+.node-outer {
   position: absolute;
+}
+
+.mydiv {
+  display: inline-block;
 }
 
 .b {
@@ -30,7 +35,7 @@
   width: 20px;
   height: 20px;
   position: absolute;
-  transform: rotate(45deg)
+  transform: rotate(45deg);
 }
 
 .c {
@@ -47,13 +52,13 @@
   z-index: 0;
 }
 
-.nodeSection{
+.nodeSection {
   margin: 7px;
   z-index: 1;
 }
 
-#nodeTitle{
-  background-color: rgba(255,255,255,.3);
+#nodeTitle {
+  background-color: rgba(255, 255, 255, 0.3);
   margin: 0;
   padding: 5px;
 }
