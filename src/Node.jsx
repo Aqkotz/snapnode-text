@@ -17,6 +17,7 @@ export default class Node extends React.Component {
     this.editor = props.editor;
   }
 
+  //fetches inputs from upstream nodes
   getInputs = () => {
     let tempVals = [];
     this.state.inputNodes.forEach((node) => {
@@ -25,18 +26,23 @@ export default class Node extends React.Component {
     return tempVals;
   };
 
+  //registers this node with the editor
   componentDidMount = () => {
     this.editor.registerNode(this);
   };
 
+  //finds the HTML element that output nodes snap into
   getInputSlotElmt = () => {
     return document.getElementById("input" + this.idNum);
   };
 
+  //finds the HTML element that input nodes snap into
   getOutputSlotElmt = () => {
     return document.getElementById("output" + this.idNum);
   };
 
+  //searches for other nodes that may snap
+  //TODO: remove bug that causes crash.
   findSnaps = () => {
     const nodes = this.editor.removeNodePure(
       this.editor.getNodes(),
@@ -60,6 +66,7 @@ export default class Node extends React.Component {
     return resultNode;
   };
 
+  //checks if snapping with other nodes is possible.
   checkSnap = () => {
     let node = this.findSnaps();
     console.log(node);
